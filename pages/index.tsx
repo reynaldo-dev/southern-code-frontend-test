@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Button, Container, Typography } from "@mui/material";
 import { MainLayout } from "@/components/layout/MainLayout";
 import Link from "next/link";
+import { paths } from "@/paths";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
@@ -33,7 +34,7 @@ export default function Home() {
           Best NASA images from NASA-API
         </Typography>
 
-        <Link href="/images">
+        <Link href={paths.photos}>
           <Button
             color="primary"
             size="large"
