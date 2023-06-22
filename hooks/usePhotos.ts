@@ -10,8 +10,10 @@ interface IUsePhotosProps {
   earth_date: string;
 }
 
-const baseURL = "https://api.nasa.gov/mars-photos/api/v1/rovers";
-const api_key = "Dgpzj1EMf5CeIHXF1tMCcPegj94yiWhflpcly8lb";
+const baseURL =
+  process.env.API_BASE_URL || "https://api.nasa.gov/mars-photos/api/v1/rovers";
+const api_key =
+  process.env.NASA_API_KEY || "Dgpzj1EMf5CeIHXF1tMCcPegj94yiWhflpcly8lb";
 
 export const usePhotos = (queries: IUsePhotosProps) => {
   const { rover, camera, sol, page, earth_date } = queries;

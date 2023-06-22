@@ -14,7 +14,7 @@ import active from "react-useanimations/lib/activity";
 import { Photo } from "@/interfaces/photo.interface";
 import { styles } from "./styles.photoView";
 import { dictionary } from "@/dictionary";
-import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { useFavorites } from "@/hooks/useFavorites";
 
 interface IPhotoViewProps {
   photo: Photo;
@@ -23,19 +23,17 @@ interface IPhotoViewProps {
 }
 
 export const PhotoView = ({ photo, isOpen, setIsOpen }: IPhotoViewProps) => {
-  const { isFavoriteItem, toggleFavoriteItem } = useLocalStorage({
-    photo,
-  });
+  const { handleFavorite, isFavorite } = useFavorites(photo);
 
-  const handleToggleFavoriteItem = () => {
-    toggleFavoriteItem();
+  const handleClose = () => {
+    window.location.reload();
   };
 
   return (
     <div>
       <Modal
         open={isOpen}
-        onClose={() => setIsOpen(false)}
+        onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -49,7 +47,7 @@ export const PhotoView = ({ photo, isOpen, setIsOpen }: IPhotoViewProps) => {
           }}
         >
           <Box sx={styles.closeContainer}>
-            <Button onClick={() => setIsOpen(false)}>
+            <Button onClick={handleClose}>
               <CloseIcon />
             </Button>
           </Box>
@@ -80,12 +78,12 @@ export const PhotoView = ({ photo, isOpen, setIsOpen }: IPhotoViewProps) => {
             {dictionary.components.card.roverStatus}: {photo?.rover.status}
           </Typography>
 
-          {isFavoriteItem() ? (
-            <Button onClick={handleToggleFavoriteItem}>
+          {isFavorite ? (
+            <Button onClick={handleFavorite}>
               <FavoriteIcon sx={{ fontSize: "2rem" }} />
             </Button>
           ) : (
-            <Button onClick={handleToggleFavoriteItem}>
+            <Button onClick={handleFavorite}>
               <FavoriteBorderIcon sx={{ fontSize: "2rem" }} />
             </Button>
           )}

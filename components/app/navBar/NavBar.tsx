@@ -17,8 +17,13 @@ import SatelliteAltIcon from "@mui/icons-material/SatelliteAlt";
 import { navbarStyles } from "./navbar.styles";
 import { dictionary } from "@/dictionary";
 import { paths } from "@/paths";
+import { Route } from "@/interfaces/route";
 
-export const NavBar = () => {
+interface INavBarProps {
+  route: Route;
+}
+
+export const NavBar = ({ route }: INavBarProps) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
@@ -44,7 +49,7 @@ export const NavBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href={route.path}
             sx={navbarStyles.logo}
           >
             <SatelliteAltIcon sx={{ mr: 1 }} />
@@ -52,10 +57,8 @@ export const NavBar = () => {
           </Typography>
 
           <Box>
-            <Link href={paths.favorites}>
-              <Typography noWrap sx={navbarStyles.logo}>
-                {dictionary.photos.appBarLink}
-              </Typography>
+            <Link href={route.path}>
+              <Typography noWrap>{route.label}</Typography>
             </Link>
           </Box>
 
