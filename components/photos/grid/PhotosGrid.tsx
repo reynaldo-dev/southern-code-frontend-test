@@ -14,6 +14,7 @@ import { PageTitle } from "@/components/app/pageTitle/PageTitle";
 import { styles } from "./photosGrid.styles";
 import { EndMessage } from "./pagination/end-message/EndMessage";
 import { LoaderPage } from "./pagination/loader/LoaderPage";
+import { handleGoUp } from "@/utils/handleGoUp";
 
 interface IPhotosGridProps {
   rover: string;
@@ -28,10 +29,6 @@ export const PhotosGrid = ({
   sol,
 }: IPhotosGridProps) => {
   const [page, setPage] = useState(1);
-
-  const handleGoUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   useEffect(() => {
     setPage(1);

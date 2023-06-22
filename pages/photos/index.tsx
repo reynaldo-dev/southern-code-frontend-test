@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Box, Container, FormControl, Typography } from "@mui/material";
 import OutlinedInput from "@mui/material/OutlinedInput";
@@ -13,6 +13,7 @@ import { PhotosGrid } from "@/components/photos/grid/PhotosGrid";
 
 import { getCurrentDate } from "@/utils/getCurrentDate";
 import { dictionary } from "@/dictionary";
+import { paths } from "@/paths";
 
 const cameras = [
   "fhaz",
@@ -41,7 +42,7 @@ const PhotosScreen = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavBar route={{ label: "Favorites", path: `${paths.favorites}` }} />
       <Container sx={styles.container}>
         <Typography variant="subtitle1" mb={2} sx={styles.filterSuggestion}>
           {dictionary.photos.filterSuggestion}
