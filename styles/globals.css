@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body{
-  background-color: #000000;
+  background-color: #1a1a1a;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
