@@ -56,7 +56,11 @@ export const NavBar = ({ route }: INavBarProps) => {
             {dictionary.photos.appBarTitle}
           </Typography>
 
-          <Box>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+            }}
+          >
             <Link href={route.path}>
               <Typography noWrap>{route.label}</Typography>
             </Link>
