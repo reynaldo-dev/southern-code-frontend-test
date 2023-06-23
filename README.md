@@ -18,7 +18,6 @@ The live version of the software can be accessed at: [https://southern-code-fron
 ## Repository
 The source code for the software is available on GitHub at: [https://github.com/reynaldo-dev/southern-code-frontend-test](https://github.com/reynaldo-dev/southern-code-frontend-test)
 
-Please note that the software is designed with a NASA-themed CSS style to enhance the visual experience.
 
 ## Installation
 
@@ -41,16 +40,9 @@ Once the software is running, you can perform the following actions:
 - Visit the favorites page to see all marked favorite photos.
 - Pagination like facebook or infinity scroll
 
-## Support
-
-If you encounter any issues or have questions regarding the NASA Photo Viewer software, please reach out to the developer by creating an issue on the GitHub repository.
-
 ## Credits
 
 The development of this software is attributed to the efforts of the developer, [reynaldo-dev](https://github.com/reynaldo-dev).
 
-## License
-
-This software is released under the [MIT License](https://github.com/reynaldo-dev/southern-code-frontend-test/blob/main/LICENSE).
 
 
