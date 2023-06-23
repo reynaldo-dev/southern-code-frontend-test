@@ -83,7 +83,7 @@ const PhotosScreen = () => {
             <input
               style={styles.inputDate}
               type="date"
-              max="2023-06-20"
+              max={getCurrentDate()} 
               name="earth_date"
               onChange={formik.handleChange}
               value={formik.values.earth_date}
