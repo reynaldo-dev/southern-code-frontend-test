@@ -1,9 +1,11 @@
 # NASA Photo Viewer Software Documentation
 
 ## Description
+
 The NASA Photo Viewer software allows users to view and filter photos based on various criteria such as `earth_date`, `rover`, `camera`, and `sol`. Users can also expand individual photos by clicking on the "Expand" button to view more details. Additionally, users can add or remove photos from their favorites. The software provides a dedicated favorites page where all marked favorite photos can be viewed.
 
 ## Technologies Used
+
 The software is developed using the following technologies:
 
 - **Next.js:** A React framework for server-side rendering and static site generation.
@@ -13,8 +15,8 @@ The software is developed using the following technologies:
 - **spline:** A lightweight CSS library for creating smooth transitions and animations.
 
 ## Repository
-The source code for the software is available on GitHub at: [https://github.com/reynaldo-dev/southern-code-frontend-test](https://github.com/reynaldo-dev/southern-code-frontend-test)
 
+The source code for the software is available on GitHub at: [https://github.com/reynaldo-dev/southern-code-frontend-test](https://github.com/reynaldo-dev/southern-code-frontend-test)
 
 ## Installation
 
@@ -26,6 +28,9 @@ To install and run the NASA Photo Viewer software locally, follow these steps:
 4. Start the development server:
 5. Open your web browser and access the software at [http://localhost:3000](http://localhost:3000).
 
+## Live site
+
+[https://vercel.com/reynaldo-dev/southern-code-frontend-test](https://vercel.com/reynaldo-dev/southern-code-frontend-test).
 
 ## Usage
 
@@ -40,6 +45,3 @@ Once the software is running, you can perform the following actions:
 ## Credits
 
 The development of this software is attributed to the efforts of the developer, [reynaldo-dev](https://github.com/reynaldo-dev).
-
-
-

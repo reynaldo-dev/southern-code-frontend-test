@@ -1,6 +1,6 @@
 export const navbarStyles = {
   root: {
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#191825",
   },
   logo: {
     mr: 2,
