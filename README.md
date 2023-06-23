@@ -18,7 +18,6 @@ The live version of the software can be accessed at: [https://southern-code-fron
 ## Repository
 The source code for the software is available on GitHub at: [https://github.com/reynaldo-dev/southern-code-frontend-test](https://github.com/reynaldo-dev/southern-code-frontend-test)
 
-Please note that the software is designed with a NASA-themed CSS style to enhance the visual experience.
 
 ## Installation
 
