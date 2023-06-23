@@ -12,9 +12,6 @@ The software is developed using the following technologies:
 - **useAnimations:** A library that provides a collection of animations for web development.
 - **spline:** A lightweight CSS library for creating smooth transitions and animations.
 
-## Live Site
-The live version of the software can be accessed at: [https://southern-code-frontend-test.vercel.app/](https://southern-code-frontend-test.vercel.app/)
-
 ## Repository
 The source code for the software is available on GitHub at: [https://github.com/reynaldo-dev/southern-code-frontend-test](https://github.com/reynaldo-dev/southern-code-frontend-test)
 
