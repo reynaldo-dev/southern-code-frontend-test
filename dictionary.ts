@@ -10,6 +10,9 @@ export const dictionary = {
     appBarLink: "Favorites",
     solInputLabel: "Number of sol",
   },
+  favorites: {
+    reload: "Reload changes",
+  },
   components: {
     card: {
       addToFavorites: "Add to favorites",

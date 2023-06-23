@@ -1,5 +1,6 @@
-import { Photo } from "@/interfaces/photo.interface";
+"use client";
 
+import { Photo } from "@/interfaces/photo.interface";
 export const isFavoriteItem = (id: number = 0) => {
   const storage: Photo[] = JSON.parse(
     localStorage.getItem("favorites") || "[]"
@@ -22,5 +23,8 @@ export const toggleFavoriteItem = (item: Photo, isFavorite: boolean) => {
 };
 
 export const getFavorites = () => {
-  return JSON.parse(localStorage.getItem("favorites") || "[]");
+  const storage: Photo[] = JSON.parse(
+    localStorage.getItem("favorites") || "[]"
+  );
+  return storage;
 };

@@ -45,16 +45,12 @@ export const NavBar = ({ route }: INavBarProps) => {
     <AppBar position="static" sx={navbarStyles.root}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href={paths.home}
-            sx={navbarStyles.logo}
-          >
-            <SatelliteAltIcon sx={{ mr: 1 }} />
-            {dictionary.photos.appBarTitle}
-          </Typography>
+          <Link href={paths.home}>
+            <Typography variant="h6" noWrap sx={navbarStyles.logo}>
+              <SatelliteAltIcon sx={{ mr: 1 }} />
+              {dictionary.photos.appBarTitle}
+            </Typography>
+          </Link>
 
           <Box
             sx={{
@@ -95,20 +91,19 @@ export const NavBar = ({ route }: INavBarProps) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <Link href={paths.favorites}>
+              <Link href={route.path}>
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    {dictionary.photos.appBarLink}
-                  </Typography>
+                  <Typography textAlign="center">{route.label}</Typography>
                 </MenuItem>
               </Link>
             </Menu>
           </Box>
+
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href={paths.home}
             sx={navbarStyles.logoResponsive}
           >
             <SatelliteAltIcon sx={{ mr: 1 }} />

@@ -23,10 +23,13 @@ interface IPhotoViewProps {
 }
 
 export const PhotoView = ({ photo, isOpen, setIsOpen }: IPhotoViewProps) => {
-  const { handleFavorite, isFavorite } = useFavorites(photo);
+  const { handleFavorite, isFavorite, reloadFavorites } = useFavorites({
+    photo,
+  });
 
   const handleClose = () => {
-    window.location.reload();
+    setIsOpen(false);
+    reloadFavorites();
   };
 
   return (

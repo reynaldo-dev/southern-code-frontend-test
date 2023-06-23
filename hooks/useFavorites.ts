@@ -2,20 +2,31 @@ import React, { useEffect, useState } from "react";
 import { Photo } from "@/interfaces/photo.interface";
 import { isFavoriteItem, toggleFavoriteItem } from "@/utils/local-storage";
 
-export const useFavorites = (photo: Photo) => {
-  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+interface IUseFavorites {
+  photo?: Photo;
+}
 
-  const handleFavorite = () => {
-    setIsFavorite(!isFavorite);
-    toggleFavoriteItem(photo, !isFavorite);
-  };
+export const useFavorites = ({ photo }: IUseFavorites) => {
+  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const [favorites, setFavorites] = useState<Photo[]>([]);
 
   useEffect(() => {
     setIsFavorite(isFavoriteItem(photo?.id));
   }, [photo]);
 
+  const reloadFavorites = () => {
+    setFavorites(JSON.parse(localStorage.getItem("favorites") || "[]"));
+  };
+
+  const handleFavorite = () => {
+    setIsFavorite(!isFavorite);
+    toggleFavoriteItem(photo as Photo, !isFavorite);
+  };
+
   return {
     isFavorite,
     handleFavorite,
+    favorites,
+    reloadFavorites,
   };
 };
