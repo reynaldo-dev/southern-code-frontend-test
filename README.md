@@ -40,16 +40,9 @@ Once the software is running, you can perform the following actions:
 - Visit the favorites page to see all marked favorite photos.
 - Pagination like facebook or infinity scroll
 
-## Support
-
-If you encounter any issues or have questions regarding the NASA Photo Viewer software, please reach out to the developer by creating an issue on the GitHub repository.
-
 ## Credits
 
 The development of this software is attributed to the efforts of the developer, [reynaldo-dev](https://github.com/reynaldo-dev).
 
-## License
-
-This software is released under the [MIT License](https://github.com/reynaldo-dev/southern-code-frontend-test/blob/main/LICENSE).
 
 
