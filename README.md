@@ -30,7 +30,7 @@ To install and run the NASA Photo Viewer software locally, follow these steps:
 
 ## Live site
 
-[https://vercel.com/reynaldo-dev/southern-code-frontend-test](https://vercel.com/reynaldo-dev/southern-code-frontend-test).
+[https://southern-code-frontend-test.vercel.app/t](https://southern-code-frontend-test.vercel.app/).
 
 ## Usage
 
