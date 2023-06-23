@@ -42,7 +42,7 @@ export const PhotoView = ({ photo, isOpen, setIsOpen }: IPhotoViewProps) => {
             ...styles.root,
             backgroundImage: `url(${photo?.img_src})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "auto auto",
+            backgroundSize: { xs: "70% auto", md: "auto auto" },
             backgroundPosition: "center",
           }}
         >
