@@ -30,4 +30,9 @@ export const styles = {
     gap: "10px",
     marginTop: "10px",
   },
+
+  text: {
+    color: "#fff",
+    marginTop: "10px",
+  },
 };
