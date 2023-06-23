@@ -18,8 +18,10 @@ export const EndMessage = ({ photos }: { photos: Photo[] }) => {
         <Typography
           sx={{
             textAlign: "center",
-            fontSize: ".5rem",
-            color: "rgba(0, 0, 0, 0.54)",
+            fontSize: "1rem",
+            color: "#c4c4c4",
+            mt: 2,
+            mb: 2,
           }}
         >
           No more photos

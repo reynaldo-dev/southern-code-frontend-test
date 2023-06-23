@@ -49,7 +49,7 @@ export const NavBar = ({ route }: INavBarProps) => {
             variant="h6"
             noWrap
             component="a"
-            href={route.path}
+            href={paths.home}
             sx={navbarStyles.logo}
           >
             <SatelliteAltIcon sx={{ mr: 1 }} />
